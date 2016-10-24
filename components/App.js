@@ -3,6 +3,23 @@ const React = require('react');
 const Filters = require('./Filters');
 const PetBrowser = require('./PetBrowser');
 
+// const myPets = [
+//   {
+//     name: 'Barky',
+//     gender: 'male',
+//     type: 'dog',
+//     age: 13,
+//     weight: '150lb'
+//   },
+//   {
+//     name: '1Barky',
+//     gender: '1male',
+//     type: '1dog',
+//     age: 113,
+//     weight: '1150lb'
+//   }
+// ]
+
 class App extends React.Component {
   constructor() {
     super();
