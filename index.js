@@ -9,4 +9,6 @@ ReactDOM.render(
   document.getElementById('main')
 );
 
+fetch('/api/pets').then(res => console.log(res))
+
 require('./test/index-test.js'); // Leave this in!

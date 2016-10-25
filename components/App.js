@@ -3,22 +3,35 @@ const React = require('react');
 const Filters = require('./Filters');
 const PetBrowser = require('./PetBrowser');
 
-// const myPets = [
-//   {
-//     name: 'Barky',
-//     gender: 'male',
-//     type: 'dog',
-//     age: 13,
-//     weight: '150lb'
-//   },
-//   {
-//     name: '1Barky',
-//     gender: '1male',
-//     type: '1dog',
-//     age: 113,
-//     weight: '1150lb'
-//   }
-// ]
+const myPets = [
+  {
+    "id": "5c142d9e-ea45-4231-8146-cccf71c704c0",
+    "type": "dog",
+    "gender": "male",
+    "age": 4,
+    "weight": 1,
+    "name": "Trident"
+  },
+  {
+    "id": "2c902312-dfa3-446f-8b4b-5e115170d807",
+    "type": "cat",
+    "gender": "male",
+    "age": 3,
+    "weight": 1,
+    "name": "Teddy"
+  }
+]
+
+const adoptedPets = [
+  {
+    "id": "2c902312-dfa3-446f-8b4b-5e115170d807",
+    "type": "cat",
+    "gender": "male",
+    "age": 3,
+    "weight": 1,
+    "name": "Teddy"
+  }
+]
 
 class App extends React.Component {
   constructor() {
@@ -42,10 +55,10 @@ class App extends React.Component {
         <div className="ui container">
           <div className="ui grid">
             <div className="four wide column">
-              <Filters />
+              <Filters filters={this.state.filters}/>
             </div>
             <div className="twelve wide column">
-              <PetBrowser />
+              <PetBrowser pets={this.state.pets} adoptedPets={this.state.adoptedPets}/>
             </div>
           </div>
         </div>
