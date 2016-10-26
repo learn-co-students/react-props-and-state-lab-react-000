@@ -5,7 +5,11 @@ class Filters extends React.Component {
     super();
     
     
-    this.handleChange = this.props.onChangeType(this.)
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event){
+    this.props.onChangeType(event.target.value)
   }
 
   render() {
@@ -13,7 +17,7 @@ class Filters extends React.Component {
       <div className="ui form">
         <h3>Animal type</h3>
         <div className="field">
-          <select name="type" onChage={this.props.onChangeType} id="type">
+          <select name="type" onChange={this.handleChange} id="type" value={this.props.filters.type}>
             <option value="all">All</option>
             <option value="cat">Cats</option>
             <option value="dog">Dogs</option>
@@ -22,7 +26,7 @@ class Filters extends React.Component {
         </div>
 
         <div className="field">
-          <button className="ui secondary button">Find pets</button>
+          <button className="ui secondary button" onClick={this.props.onFindPetsClick}>Find pets</button>
         </div>
       </div>
     );

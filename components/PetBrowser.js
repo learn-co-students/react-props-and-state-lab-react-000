@@ -6,7 +6,7 @@ class PetBrowser extends React.Component {
   render() {
     
     const checkAdoption = pet => {
-      return this.props.adoptedPets.filter( petObj => petObj.id == pet.id).length > 0
+      return this.props.adoptedPets.filter( petId => petId == pet.id).length > 0
     }
     
     const petComponents = this.props.pets.map(petObj => {
